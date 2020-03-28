@@ -1,5 +1,5 @@
 {
-  "name": "Islamic Prayer Times API",
+  "name": "usmanatron/islamic-prayer-times-api",
   "description": "An API for finding Islamic Prayer Times",
   "require": {
     "slim/slim": "4.4.0",
