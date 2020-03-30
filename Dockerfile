@@ -1,5 +1,7 @@
 FROM php:7.4.4-fpm-alpine3.11
 
+RUN docker-php-ext-install calendar
+
 RUN apk add nano nginx supervisor && \
     rm -rf /var/lib/apt/lists/*
 
