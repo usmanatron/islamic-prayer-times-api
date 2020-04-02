@@ -5,15 +5,14 @@ namespace App\Action;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest;
 use IslamicNetwork\PrayerTimes\PrayerTimes;
+use App\Service\PrayerTimesService;
 
 final class PrayerTimesAction
 {
   public function __invoke(ServerRequest $request, Response $response): Response
   {
-    $pt = new PrayerTimes('ISNA');
-
-    $times = $pt->getTimesForToday("51.599507", "-0.289562", "Europe/London");
-    
+    $pts = new PrayerTimesService();
+    $times = $pts->GetTimes();
     return $response->withJson($times);
   }
 }
