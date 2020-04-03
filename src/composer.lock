@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eacb086b5dc0d9a2b2d6ef437c294b4e",
+    "content-hash": "1c29deb0245eb73e90f5615fa6ce2b14",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -112,6 +112,47 @@
                 "response"
             ],
             "time": "2020-02-05T20:36:27+00:00"
+        },
+        {
+            "name": "fkeloks/simple-container",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fkeloks/simple-container.git",
+                "reference": "c5294d2b0e03bb05e487b70a1ab3e907524defd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fkeloks/simple-container/zipball/c5294d2b0e03bb05e487b70a1ab3e907524defd3",
+                "reference": "c5294d2b0e03bb05e487b70a1ab3e907524defd3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "psr/container": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "6.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SimpleContainer\\": "src",
+                    "SimpleContainerTests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "fkeloks",
+                    "email": "fkeloks@gmail.com"
+                }
+            ],
+            "description": "A simple psr-11 container for PHP >= 7.0",
+            "time": "2017-09-04T08:17:11+00:00"
         },
         {
             "name": "islamic-network/prayer-times",

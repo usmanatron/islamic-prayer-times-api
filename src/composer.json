@@ -6,6 +6,7 @@
     "slim/psr7": "1.0.0",
     "slim/http": "1.0.0",
     "selective/config": "0.1.1",
+    "fkeloks/simple-container": "1.0.0",
     "islamic-network/prayer-times": "1.0.7"
   },
   "autoload":

@@ -1,6 +1,7 @@
 <?php
 
 use Selective\Config\Configuration;
+use SimpleContainer\ContainerBuilder;
 use Slim\App;
 
 return function (App $app) {
@@ -11,7 +12,8 @@ return function (App $app) {
     $app->addRoutingMiddleware();
 
     // Add error handler middleware
-    $settings = (new Configuration(require __DIR__ . '/settings.php'))->getArray('error_handler_middleware');
+    $container = ContainerBuilder::getContainer();
+    $settings = ($container->get('Settings'))->get('error_handler_middleware');
 
     $displayErrorDetails = (bool)$settings['display_error_details'];
     $logErrors = (bool)$settings['log_errors'];
