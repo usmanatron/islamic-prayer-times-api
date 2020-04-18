@@ -9,6 +9,10 @@
   },
   "prayer_time_defaults": {
     "isna": "ISNA"
+  "logger": {
+    "name": "ipt-api",
+    "path": "/var/log/ipt-api.log",
+    "include_stdout": false,
+    "debug": false
   }
-  
 }
