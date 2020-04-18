@@ -17,7 +17,7 @@
   "logger": {
     "name": "ipt-api",
     "path": "/var/log/ipt-api.log",
-    "include_stdout": false,
-    "debug": false
+    "include_stdout": true,
+    "debug": true
   }
 }

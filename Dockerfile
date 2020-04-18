@@ -5,16 +5,17 @@ RUN docker-php-ext-install calendar
 RUN apk add nano nginx supervisor && \
     rm -rf /var/lib/apt/lists/*
 
+# Override settings with copy in rootfs
+COPY src /var/www/html
 COPY rootfs /
+
 RUN mkdir -p /run/nginx && \
     chmod +x /root/*.sh && \
     /root/install_composer.sh
 
-COPY src /var/www/html
 RUN cd /var/www/html && \
     php composer.phar install
 
-VOLUME ["/var/www/html"]
 EXPOSE 80
 
 CMD "/usr/bin/supervisord" "-nc" "/etc/supervisor/supervisord.conf"
