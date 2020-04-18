@@ -7,13 +7,21 @@ use IslamicNetwork\PrayerTimes\PrayerTimes;
 
 final class PrayerTimesService
 {
-  public function GetTimes(): Array
+
+  private $settings;
+
+  public function __construct()
   {
     $container = ContainerBuilder::getContainer();
-    $method = ($container->get('Settings'))->get('prayer_time_defaults')['isna'];
+    $this->settings = $container->get('Settings');
+  }
+
+  public function GetTimes(): Array
+  {
+    $method = $this->settings->get('prayer_time_defaults')['method'];
     $pt = new PrayerTimes($method);
 
-    $times = $pt->getTimesForToday("51.599507", "-0.289562", "Europe/London");
+    $times = $pt->getTimesForToday("51.599507", "-0.289562", "UTC");
     
     return $times;
   }

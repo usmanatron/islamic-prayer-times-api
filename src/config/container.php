@@ -8,7 +8,7 @@ class Settings {
   private $settings;
 
   public function __construct() {
-    date_default_timezone_set('Europe/London');
+    date_default_timezone_set('UTC');
 
     $raw_settings = file_get_contents(__DIR__ . "/settings.json", true);
     $this->settings = json_decode($raw_settings, true);
